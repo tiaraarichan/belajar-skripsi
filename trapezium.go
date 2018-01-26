@@ -14,7 +14,7 @@ func main(){
 	fmt.Scanf("%f", &n)
 
 	h := (b-a)/n
-fmt.Printf("nilai h : %f", h)
+fmt.Printf("nilai h : %f \n", h)
 
   for x := 0.; x < n+1; x++{
 fx := x*h
