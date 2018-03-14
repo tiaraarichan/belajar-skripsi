@@ -1,0 +1,44 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	)
+func main(){
+	var (
+	a, b, n, c, g, f float64
+	)
+	fmt.Println("masukkan nilai a :")
+	fmt.Scanf("%f", &a)
+	fmt.Println("masukkan nilai b :")
+	fmt.Scanf("%f", &b)
+	fmt.Println("masukkan nilai n :")
+	fmt.Scanf("%f", &n)
+
+	h := (b-a)/n //mencari nilai h
+	fmt.Printf("nilai h : %f \n", h)
+
+//mulai menghitung
+	for x := 0.; x < n+1; x++{
+fx := x*h
+
+	fmt.Printf("iterasi ke %f hasilnya fx nya : %f \n", x, fx)
+
+	if x != a && x != n{
+		g = math.Mod (x, 2)
+			if g != 0{
+				c = fx*4
+			} else {
+				c = fx*2}
+	} else {
+		c = fx}
+fmt.Printf("iterasi ke %f hasilnya : %f \n", x, c)
+	f = f + c
+	}
+
+d := f*h/3
+fmt.Printf("hasil perhitungan f adalah : %f \n", f)
+fmt.Printf("hasil perhitungan adalah : %f \n", d)
+
+
+}
